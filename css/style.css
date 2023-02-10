@@ -1,0 +1,40 @@
+
+header {
+    background:olivedrab;
+    color:beige;
+}
+
+header h1  {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 35pt;
+    font-weight: bold;
+    padding: 15px;
+    text-align: center;
+    text-shadow: 4px 4px 6px rgb(110, 62, 4);
+}
+
+body {
+    background-image:url(https://res.cloudinary.com/dk-find-out/image/upload/q_80,w_1920,f_auto/MA_00000388_wdaqoy.jpg);
+
+}
+
+p {
+    background-color:beige;
+    color:rgb(110, 62, 4);
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size:20px;
+    line-height: 25px;
+    margin: 30px;
+    padding: 10px 40px 10px 40px;
+    text-indent: 50px;
+
+}
+
+footer {
+    background-color:beige;
+    color: rgb(110, 62, 4);
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;  
+    padding:
+    margin:100px;
+    text-align:center;  
+}
