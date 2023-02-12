@@ -71,56 +71,56 @@ if (goal.toLowerCase() === 'yes' || goal.toLowerCase() === 'y') {
   alert('Please respond with \'yes\' or \'no\' only!');
 }
 
-let myNumber = 7;
-let attempts = 3;
-let yourGuess = parseInt(prompt('I\'m thinking of a number between 1 and 10, can you guess what it is?'));
-// if (yourGuess === myNumber){
+// let myNumber = 7;
+// let attempts = 3;
+// let yourGuess = parseInt(prompt('I\'m thinking of a number between 1 and 10, can you guess what it is?'));
+// // if (yourGuess === myNumber){
+// //   alert ('You got it!');
+// //   score++;
+// // }
+// while (myNumber != yourGuess) {
+//   if (!attempts) {
+//     alert ('You\'re out of guesses');
+//     break;
+//   }
+//   if (yourGuess < myNumber) {
+//     yourGuess = prompt('Too low! Guess again...');
+//     attempts--;
+//   } else if (yourGuess > myNumber) {
+//     yourGuess = prompt('Too high! Guess again');
+//     attempts--;
+//   }
+// }
+// if (yourGuess == myNumber){
 //   alert ('You got it!');
 //   score++;
 // }
-while (myNumber != yourGuess) {
-  if (!attempts) {
-    alert ('You\'re out of guesses');
-    break;
-  }
-  if (yourGuess < myNumber) {
-    yourGuess = prompt('Too low! Guess again...');
-    attempts--;
-  } else if (yourGuess > myNumber) {
-    yourGuess = prompt('Too high! Guess again');
-    attempts--;
-  }
-}
-if (yourGuess == myNumber){
-  alert ('You got it!');
-  score++;
-}
 
-let places = ['Scotland', 'Ireland', 'Japan', 'Norway'];
-let guesses = 6;
-let userGuess = prompt('What is my #1 place I want to visit most?');
-let guessRight = false;
+// let places = ['Scotland', 'Ireland', 'Japan', 'Norway'];
+// let guesses = 6;
+// let userGuess = prompt('What is my #1 place I want to visit most?');
+// let guessRight = false;
 
-while (guesses > 0) {
-  for (let i=0; i < places.length; i++) {
-    let currentplace = places[i];
-    // if (yourGuess.toLowerCase() !== currentplace.toLowerCase()) {
-    console.log (userGuess, currentplace);
-    if (userGuess.toLowerCase() === currentplace.toLowerCase()) {
-      alert(`You got it! I would love to go ${userGuess}`);
-      guessRight = true;
-      break; }
-  }
-  if (guessRight) break;
+// while (guesses > 0) {
+//   for (let i=0; i < places.length; i++) {
+//     let currentplace = places[i];
+//     // if (yourGuess.toLowerCase() !== currentplace.toLowerCase()) {
+//     console.log (userGuess, currentplace);
+//     if (userGuess.toLowerCase() === currentplace.toLowerCase()) {
+//       alert(`You got it! I would love to go ${userGuess}`);
+//       guessRight = true;
+//       break; }
+//   }
+//   if (guessRight) break;
 
-  guesses = guesses-1;
-  if (!guesses) {
-    alert('You\'re out of guesses!');
-  }
-  else {
-    userGuess = prompt('I\'d love to go there but that\'s not my #1, guess again!');
-  }
-}
+//   guesses = guesses-1;
+//   if (!guesses) {
+//     alert('You\'re out of guesses!');
+//   }
+//   else {
+//     userGuess = prompt('I\'d love to go there but that\'s not my #1, guess again!');
+//   }
+// }
 
 alert (`You got a score of ${score}`);
 console.log(score);
