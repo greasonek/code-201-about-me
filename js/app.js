@@ -122,5 +122,5 @@ if (goal.toLowerCase() === 'yes' || goal.toLowerCase() === 'y') {
 //   }
 // }
 
-alert (`You got a score of ${score}`);
+alert (`You got a score of ${score} out of 7`);
 console.log(score);
