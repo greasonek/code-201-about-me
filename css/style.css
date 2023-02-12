@@ -18,7 +18,7 @@ body {
 
 }
 
-p {
+section {
     background-color:beige;
     color:rgb(110, 62, 4);
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -28,6 +28,31 @@ p {
     padding: 10px 40px 10px 40px;
     text-indent: 50px;
 
+}
+
+.placesList {
+    background-color:beige;
+    color:rgb(110, 62, 4);
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size:20px;
+    line-height: 30px;
+    margin: 30px;
+    padding: 10px 40px 10px 40px;
+}
+
+.listTitle {
+    font-size: 30px;
+    text-align: left;
+    text-indent: 30px;
+}
+
+.aboutMeList {
+    line-height: 35px;
+}
+
+h2 {
+    font-size:30px;
+    padding:15px;
 }
 
 footer {
