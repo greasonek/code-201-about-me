@@ -3,7 +3,7 @@
 let score = 0;
 
 let yourName = prompt('Welcome to my page! What is your name?');
-alert('Thanks ' + yourName + ', I\'m happy you\'re here! Let\'s play a guessing game to see how well you know me. Please respong with \'yes\' or \'no\'');
+alert('Thanks ' + yourName + ', I\'m happy you\'re here! Let\'s play a guessing game to see how well you know me. Please respond with \'yes\' or \'no\'');
 
 let homeState = prompt('Do you think I\'m from Washington state?');
 // console.log(homeState);
@@ -105,7 +105,7 @@ while (guesses > 0) {
     // if (yourGuess.toLowerCase() !== currentplace.toLowerCase()) {
     console.log (userGuess, currentplace);
     if (userGuess.toLowerCase() === currentplace.toLowerCase()) {
-      alert(`You got it! I would love to go ${userGuess}`);
+      alert(`You got it! I would love to go ${userGuess}.`);
       guessRight = true;
       score++;
       break; }
