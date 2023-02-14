@@ -72,29 +72,27 @@ if (goal.toLowerCase() === 'yes' || goal.toLowerCase() === 'y') {
 }
 
 let myNumber = 7;
-let attempts = 3;
-let yourGuess = parseInt(prompt('I\'m thinking of a number between 1 and 10, can you guess what it is?'));
-// if (yourGuess === myNumber){
-//   alert ('You got it!');
-//   score++;
-// }
-while (myNumber != yourGuess) {
-  if (!attempts) {
-    alert ('You\'re out of guesses');
+let attempts = 4;
+
+while(attempts){
+  let response = prompt(`I'm thinking of a number between 1 and 10, can you guess what it is? You have ${attempts} chances to guess it right`);
+  attempts--;
+
+  if(response > myNumber){
+    alert('Too high!');
+  } else if (response < myNumber){
+    alert('Too low!');
+  } else {
+    (response === myNumber);
+    alert('You got it! Good job!');
+    score++;
     break;
   }
-  if (yourGuess < myNumber) {
-    yourGuess = prompt('Too low! Guess again...');
-    attempts--;
-  } else if (yourGuess > myNumber) {
-    yourGuess = prompt('Too high! Guess again');
-    attempts--;
+  if(!attempts){
+    alert('You\'ve run out of attempts!');
   }
 }
-if (yourGuess == myNumber){
-  alert ('You got it!');
-  score++;
-}
+
 
 let places = ['Scotland', 'Ireland', 'Japan', 'Norway'];
 let guesses = 6;
@@ -109,6 +107,7 @@ while (guesses > 0) {
     if (userGuess.toLowerCase() === currentplace.toLowerCase()) {
       alert(`You got it! I would love to go ${userGuess}`);
       guessRight = true;
+      score++;
       break; }
   }
   if (guessRight) break;
