@@ -1,75 +1,130 @@
 'use strict';
 
-let score = 0;
+// let score = 0;
+function getName(userName) {
+  return(userName);
+}
 
-let yourName = prompt('Welcome to my page! What is your name?');
-alert('Thanks ' + yourName + ', I\'m happy you\'re here! Let\'s play a guessing game to see how well you know me. Please respond with \'yes\' or \'no\'');
+let userName = prompt('What is your name?');
 
-let homeState = prompt('Do you think I\'m from Washington state?');
-// console.log(homeState);
-// console.log(typeof homeState);
-
-if (homeState.toLowerCase() === 'yes' || homeState.toLowerCase() === 'y') {
-  alert('Wrong! I am originally from North Carolina.');
-} else if (homeState.toLowerCase() === 'no' || homeState.toLowerCase() === 'n' ) {
+if (userName){
+  console.log(getName);
+  alert('Thanks ' + userName + ', I\'m happy you\'re here! Let\'s play a guessing game to see how well you know me. Please respond with \'yes\' or \'no\'');
+}
+// let yourName = prompt('Welcome to my page! What is your name?');
+// alert('Thanks ' + yourName + ', I\'m happy you\'re here! Let\'s play a guessing game to see how well you know me. Please respond with \'yes\' or \'no\'');
+function homeState(){
+  let userInput = prompt('Do you think I\'m from Washington state?');
+  if (userInput === 'no' || userInput === 'n'){
   alert('Correct! I am originally from North Carolina.');
-  score++;
-  console.log(score);
-} else {
-  alert('Please respond with \'yes\' or \'no\' only!');
+  console.log('Correct! I am originally from North Carolina.');
+} else if (userInput === 'yes' || userInput === 'y'){
+  alert('Wrong! I am originally from North Carolina.');
 }
-
-let college = prompt('Do you think I graduated college?');
-// // console.log(college);
-// // console.log(typeof college);
-
-if (college.toLowerCase() === 'yes' || college.toLowerCase() === 'y') {
-  alert('Correct! I graduated from Appalachian State University.');
-  score++;
-} else if (college.toLowerCase() === 'no' || college.toLowerCase() === 'n') {
-  alert('Wrong! I graduated from Appalachian State University.');
-} else {
-  alert('Please respond with \'yes\' or \'no\' only!');
 }
+homeState();
+// let homeState = prompt('Do you think I\'m from Washington state?');
+// // console.log(homeState);
+// // console.log(typeof homeState);
 
-let cannabis = prompt('Do you think my dream job was to work in cannabis?');
-// // console.log(cannabis);
-// // console.log(typeof cannabis);
-
-if (cannabis.toLowerCase() === 'yes' || cannabis.toLowerCase() === 'y') {
-  alert('Nope! I decided to move to Colorado and work in cannabis one month before graduating college.');
-} else if (cannabis.toLowerCase() === 'no' || cannabis.toLowerCase() === 'n') {
-  alert('Correct! I decided to move to Colorado and work in cannabis one month before graduating college.');
-  score++;
-} else {
-  alert('Please respond with \'yes\' or \'no\' only!');
+// if (homeState.toLowerCase() === 'yes' || homeState.toLowerCase() === 'y') {
+//   alert('Wrong! I am originally from North Carolina.');
+// } else if (homeState.toLowerCase() === 'no' || homeState.toLowerCase() === 'n' ) {
+//   alert('Correct! I am originally from North Carolina.');
+//   score++;
+//   console.log(score);
+// } else {
+//   alert('Please respond with \'yes\' or \'no\' only!');
+// }
+function college() {
+  let userInput = prompt('Do you think I graduated college?');
+  if (userInput === 'no' || userInput === 'n') {
+    alert('Wrong! I graduated from Appalachian State University.');
+    console.log('Wrong! I graduated from Appalachian State University.');
+  } else if (userInput === 'yes' || userInput === 'y') {
+    alert('Correct! I graduated from Appalachian State University.');
+  }
 }
+college();
+// let college = prompt('Do you think I graduated college?');
+// // // console.log(college);
+// // // console.log(typeof college);
 
-let travel = prompt('Do you think I enjoy travelling?');
-// // console.log(travel);
-// // console.log(typeof travel);
-
-if (travel.toLowerCase() === 'yes'|| travel.toLowerCase() === 'y' ) {
-  alert('Correct! I live to travel.');
-  score++;
-} else if (travel.toLowerCase() === 'no' || travel.toLowerCase() === 'n') {
-  alert('Wow. It\'s like you don\'t even know me.');
-} else {
-  alert('Please respond with \'yes\' or \'no\' only!');
+// if (college.toLowerCase() === 'yes' || college.toLowerCase() === 'y') {
+//   alert('Correct! I graduated from Appalachian State University.');
+//   score++;
+// } else if (college.toLowerCase() === 'no' || college.toLowerCase() === 'n') {
+//   alert('Wrong! I graduated from Appalachian State University.');
+// } else {
+//   alert('Please respond with \'yes\' or \'no\' only!');
+// }
+function cannabis() {
+  let userInput = prompt('Do you think my dream job was to work in cannabis?');
+  if (userInput === 'no' || userInput === 'n') {
+    alert('Correct! I decided to move to Colorado and work in cannabis one month before graduating college.');
+    console.log('Correct! I decided to move to Colorado and work in cannabis one month before graduating college.');
+  } else if (userInput === 'yes' || userInput === 'y') {
+    alert('Nope! I decided to move to Colorado and work in cannabis one month before graduating college.');
+  }
 }
+cannabis();
+// let cannabis = prompt('Do you think my dream job was to work in cannabis?');
+// // // console.log(cannabis);
+// // // console.log(typeof cannabis);
 
-let goal = prompt('Do you think I will become a software engineer?');
-// // console.log(goal);
-// // console.log(typeof goal);
-
-if (goal.toLowerCase() === 'yes' || goal.toLowerCase() === 'y') {
-  alert('Me too! Thanks for believing in me friend.');
-  score++;
-} else if (goal.toLowerCase() === 'no' || goal.toLowerCase() === 'n') {
-  alert('How rude!');
-}else {
-  alert('Please respond with \'yes\' or \'no\' only!');
+// if (cannabis.toLowerCase() === 'yes' || cannabis.toLowerCase() === 'y') {
+//   alert('Nope! I decided to move to Colorado and work in cannabis one month before graduating college.');
+// } else if (cannabis.toLowerCase() === 'no' || cannabis.toLowerCase() === 'n') {
+//   alert('Correct! I decided to move to Colorado and work in cannabis one month before graduating college.');
+//   score++;
+// } else {
+//   alert('Please respond with \'yes\' or \'no\' only!');
+// }
+function travel() {
+  let userInput = prompt('Do you think I enjoy travelling?');
+  if (userInput === 'no' || userInput === 'n') {
+    alert('Wow. It\'s like you don\'t even know me.');
+    console.log('Wow. It\'s like you don\'t even know me.');
+  } else if (userInput === 'yes' || userInput === 'y') {
+    alert('Correct! I live to travel.');
+  }
 }
+travel();
+// let travel = prompt('Do you think I enjoy travelling?');
+// // // console.log(travel);
+// // // console.log(typeof travel);
+
+// if (travel.toLowerCase() === 'yes'|| travel.toLowerCase() === 'y' ) {
+//   alert('Correct! I live to travel.');
+//   score++;
+// } else if (travel.toLowerCase() === 'no' || travel.toLowerCase() === 'n') {
+//   alert('Wow. It\'s like you don\'t even know me.');
+// } else {
+//   alert('Please respond with \'yes\' or \'no\' only!');
+// }
+function goal() {
+  let userInput = prompt('Do you think I will become a software engineer?');
+  if (userInput === 'no' || userInput === 'n') {
+    alert('How rude!');
+    console.log('How rude!');
+  } else if (userInput === 'yes' || userInput === 'y') {
+    alert('Me too! Thanks for believing in me friend.');
+  }
+}
+goal();
+// let goal = prompt('Do you think I will become a software engineer?');
+// // // console.log(goal);
+// // // console.log(typeof goal);
+
+// if (goal.toLowerCase() === 'yes' || goal.toLowerCase() === 'y') {
+//   alert('Me too! Thanks for believing in me friend.');
+//   score++;
+// } else if (goal.toLowerCase() === 'no' || goal.toLowerCase() === 'n') {
+//   alert('How rude!');
+// }else {
+//   alert('Please respond with \'yes\' or \'no\' only!');
+// }
+function numberGuess(guessNumber){
 
 let myNumber = 7;
 let attempts = 4;
@@ -92,7 +147,10 @@ while(attempts){
     alert('You\'ve run out of attempts!');
   }
 }
+}
+numberGuess();
 
+function countries(){
 
 let places = ['Scotland', 'Ireland', 'Japan', 'Norway'];
 let guesses = 6;
@@ -120,6 +178,8 @@ while (guesses > 0) {
     userGuess = prompt('I\'d love to go there but that\'s not my #1, guess again!');
   }
 }
+}
+countries();
 
-alert (`You got a score of ${score} out of 7`);
-console.log(score);
+// alert (`You got a score of ${score} out of 7`);
+// console.log(score);
