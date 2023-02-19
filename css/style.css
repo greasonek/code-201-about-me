@@ -27,6 +27,7 @@ section {
     margin: 30px;
     padding: 10px 40px 10px 40px;
     text-indent: 50px;
+    dispay: inline-block;
 
 }
 

@@ -1,6 +1,6 @@
 'use strict';
 
-// let score = 0;
+let score = 0;
 function getName(userName) {
   return(userName);
 }
@@ -16,11 +16,12 @@ if (userName){
 function homeState(){
   let userInput = prompt('Do you think I\'m from Washington state?');
   if (userInput === 'no' || userInput === 'n'){
-  alert('Correct! I am originally from North Carolina.');
-  console.log('Correct! I am originally from North Carolina.');
-} else if (userInput === 'yes' || userInput === 'y'){
-  alert('Wrong! I am originally from North Carolina.');
-}
+    alert('Correct! I am originally from North Carolina.');
+    console.log('Correct! I am originally from North Carolina.');
+  } else if (userInput === 'yes' || userInput === 'y'){
+    alert('Wrong! I am originally from North Carolina.');
+    score++;
+  }
 }
 homeState();
 // let homeState = prompt('Do you think I\'m from Washington state?');
@@ -43,6 +44,7 @@ function college() {
     console.log('Wrong! I graduated from Appalachian State University.');
   } else if (userInput === 'yes' || userInput === 'y') {
     alert('Correct! I graduated from Appalachian State University.');
+    score++;
   }
 }
 college();
@@ -63,6 +65,7 @@ function cannabis() {
   if (userInput === 'no' || userInput === 'n') {
     alert('Correct! I decided to move to Colorado and work in cannabis one month before graduating college.');
     console.log('Correct! I decided to move to Colorado and work in cannabis one month before graduating college.');
+    score++;
   } else if (userInput === 'yes' || userInput === 'y') {
     alert('Nope! I decided to move to Colorado and work in cannabis one month before graduating college.');
   }
@@ -87,6 +90,7 @@ function travel() {
     console.log('Wow. It\'s like you don\'t even know me.');
   } else if (userInput === 'yes' || userInput === 'y') {
     alert('Correct! I live to travel.');
+    score++;
   }
 }
 travel();
@@ -109,6 +113,7 @@ function goal() {
     console.log('How rude!');
   } else if (userInput === 'yes' || userInput === 'y') {
     alert('Me too! Thanks for believing in me friend.');
+    score++;
   }
 }
 goal();
@@ -126,60 +131,60 @@ goal();
 // }
 function numberGuess(guessNumber){
 
-let myNumber = 7;
-let attempts = 4;
+  let myNumber = 7;
+  let attempts = 4;
 
-while(attempts){
-  let response = prompt(`I'm thinking of a number between 1 and 10, can you guess what it is? You have ${attempts} chances to guess it right`);
-  attempts--;
+  while(attempts){
+    let response = prompt(`I'm thinking of a number between 1 and 10, can you guess what it is? You have ${attempts} chances to guess it right`);
+    attempts--;
 
-  if(response > myNumber){
-    alert('Too high!');
-  } else if (response < myNumber){
-    alert('Too low!');
-  } else {
-    (response === myNumber);
-    alert('You got it! Good job!');
-    score++;
-    break;
+    if(response > myNumber){
+      alert('Too high!');
+    } else if (response < myNumber){
+      alert('Too low!');
+    } else {
+      (response === myNumber);
+      alert('You got it! Good job!');
+      score++;
+      break;
+    }
+    if(!attempts){
+      alert('You\'ve run out of attempts!');
+    }
   }
-  if(!attempts){
-    alert('You\'ve run out of attempts!');
-  }
-}
 }
 numberGuess();
 
 function countries(){
 
-let places = ['Scotland', 'Ireland', 'Japan', 'Norway'];
-let guesses = 6;
-let userGuess = prompt('What is my #1 place I want to visit most?');
-let guessRight = false;
+  let places = ['Scotland', 'Ireland', 'Japan', 'Norway'];
+  let guesses = 6;
+  let userGuess = prompt('What is my #1 place I want to visit most?');
+  let guessRight = false;
 
-while (guesses > 0) {
-  for (let i=0; i < places.length; i++) {
-    let currentplace = places[i];
-    // if (yourGuess.toLowerCase() !== currentplace.toLowerCase()) {
-    console.log (userGuess, currentplace);
-    if (userGuess.toLowerCase() === currentplace.toLowerCase()) {
-      alert(`You got it! I would love to go ${userGuess}.`);
-      guessRight = true;
+  while (guesses > 0) {
+    for (let i=0; i < places.length; i++) {
+      let currentplace = places[i];
+      // if (yourGuess.toLowerCase() !== currentplace.toLowerCase()) {
+      console.log (userGuess, currentplace);
+      if (userGuess.toLowerCase() === currentplace.toLowerCase()) {
+        alert(`You got it! I would love to go ${userGuess}.`);
+        guessRight = true;
+        break; }
       score++;
-      break; }
-  }
-  if (guessRight) break;
+    }
+    if (guessRight) break;
 
-  guesses = guesses-1;
-  if (!guesses) {
-    alert('You\'re out of guesses!');
+    guesses = guesses-1;
+    if (!guesses) {
+      alert('You\'re out of guesses!');
+    }
+    else {
+      userGuess = prompt('I\'d love to go there but that\'s not my #1, guess again!');
+    }
   }
-  else {
-    userGuess = prompt('I\'d love to go there but that\'s not my #1, guess again!');
-  }
-}
 }
 countries();
 
-// alert (`You got a score of ${score} out of 7`);
-// console.log(score);
+alert (`You got a score of ${score} out of 7`);
+console.log(score);
